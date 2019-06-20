@@ -1,7 +1,6 @@
 package rlk.a1000;
 /**
  * This is an example of A1000
- * This code works
  */
 
 import java.io.BufferedReader;
@@ -20,9 +19,11 @@ public class get_a_list_of_matched_file {
 	}
 	
 	private static void run() {
-		String token = "c206375e5d058603e9766d31aa9dac023c9b4e8b";		
-	    String address = "http://a1000.reversinglabs.io";		
-		String hash = "d79422fa3626891e06ab394750625c2d461fe304";
+		// token 값 입력
+		String token = "";
+	    String address = "http://a1000.reversinglabs.io";
+	    // hash 값 입력
+		String hash = "";
 		String requestURL = address + "/api/samples/" + hash + "/extracted-files/";		
 				
 		HttpClient httpClient = HttpClientBuilder.create().build();				

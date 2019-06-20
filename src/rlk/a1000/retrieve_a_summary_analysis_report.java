@@ -1,5 +1,10 @@
 package rlk.a1000;
 
+/**
+ * This is an example of A1000
+ */
+
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
@@ -23,14 +28,16 @@ public class retrieve_a_summary_analysis_report {
 	}	
 	
 	private static void run() {
-		String token = "c206375e5d058603e9766d31aa9dac023c9b4e8b";		
+		// token 값 입력
+		String token = "";
 	    String address = "http://a1000.reversinglabs.io";
 	    String requestURL = address + "/api/samples/list/";
 
 	    // 대상이되는 hash 값을 벌크로 받는 경우를 가정한 Array
+		// hash 값 입력
 	    ArrayList<String> example = new ArrayList<>();
-	    example.add("ac88ecc39661fa1bdafca53eb2db02fab3fc7b41");
-	    example.add("ac88ecc39661fa1bdafca53eb2db02fab3fc7b41");
+	    example.add("");
+	    example.add("");
 		
 		// json value에 포함이될 checkSum을 ArrayList로 할당
 		ArrayList<String> checkSum = new ArrayList<>();		 

@@ -2,7 +2,6 @@ package rlk.a1000;
 
 /**
  * This is an example of A1000
- * This code works
  */
 
 import java.io.BufferedReader;
@@ -27,10 +26,12 @@ public class upload_a_sample_to_a1000_for_analysis {
 	}	
 	
 	private static void run() {
-		String token = "c206375e5d058603e9766d31aa9dac023c9b4e8b";		
+		// token 값 입력
+		String token = "";
 	    String address = "http://a1000.reversinglabs.io";
 	    String requestURL = address + "/api/uploads/";
-	    String fileLocation = "C:\\Test_Environment\\rufus-3.3p.exe";
+	    // 업로드 파일 경로 입력
+	    String fileLocation = "";
 		
 		HttpPost httpPost = new HttpPost (requestURL);
 		httpPost.addHeader("Authorization", "Token " + token);
