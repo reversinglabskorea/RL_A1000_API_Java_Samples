@@ -2,6 +2,8 @@
 *.sublime-project
 *.sublime-workspace
 .bundle
+.classpath
+.project
 .DS_Store
 .jekyll-metadata
 .sass-cache
@@ -12,3 +14,6 @@ example/_site
 Gemfile.lock
 node_modules
 npm-debug.log*
+ReversingLas_RestfulAPI.iml
+.settings
+bin
