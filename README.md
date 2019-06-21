@@ -1,3 +1,5 @@
 # RL_A1000_API_Java_Samples
 
-Java를 이용하여 A1000 API를 제어하기 위한 예제 코드입니다.
+This is sample code for A1000 API using JAVA
+
+You can check A1000 documentation on http(s)://<A1000_ADDRESS>/static/docs/html/pages/a1000/index.html and https://reversinglabs.atlassian.net/wiki/spaces/RL/overview
