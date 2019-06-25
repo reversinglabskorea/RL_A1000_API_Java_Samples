@@ -1,8 +1,27 @@
-package rlk.a1000;
-
 /**
- * This is an example of A1000
+ * A1000 API Examples
+ *
+ * Copyright (c) 2019 ReversingLabs Korea
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements. See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership. The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
  */
+
+package rlk.a1000;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -26,11 +45,12 @@ public class upload_a_sample_to_a1000_for_analysis {
 	}	
 	
 	private static void run() {
-		// token 값 입력
+		// input token value
 		String token = "";
-	    String address = "http://a1000.reversinglabs.io";
+		// input address value
+	    String address = "";
 	    String requestURL = address + "/api/uploads/";
-	    // 업로드 파일 경로 입력
+		// input upload file path
 	    String fileLocation = "";
 		
 		HttpPost httpPost = new HttpPost (requestURL);
@@ -39,8 +59,7 @@ public class upload_a_sample_to_a1000_for_analysis {
 		File file = new File(fileLocation);
 		ContentType contentType = ContentType.MULTIPART_FORM_DATA;
 		FileBody payload = new FileBody(file, contentType, file.getName());
-		
-		// http body json 생성
+
 		JSONObject jsonObject = new JSONObject();
         jsonObject.put("filename", "testFilename.extension");
         jsonObject.put("analysis", "cloud");
@@ -50,8 +69,7 @@ public class upload_a_sample_to_a1000_for_analysis {
         HttpClient httpClient = HttpClientBuilder.create().build();
         
 		try {
-			
-			// http entity 설정
+
 			HttpEntity entity = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
 					.addPart("file", payload)
 					//.addPart("name", new StringBody("file"))					
