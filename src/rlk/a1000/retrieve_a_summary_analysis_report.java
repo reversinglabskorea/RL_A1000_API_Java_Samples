@@ -44,15 +44,15 @@ public class retrieve_a_summary_analysis_report {
 	
 	private static void run() {
 		// input token value
-		String token = "";
+		String token = "c206375e5d058603e9766d31aa9dac023c9b4e8b";
 		// input address value
-	    String address = "";
+	    String address = "http://a1000.reversinglabs.io";
 	    String requestURL = address + "/api/samples/list/";
 
 	    // input hash values
 	    ArrayList<String> example = new ArrayList<>();
-	    example.add("");
-	    example.add("");
+	    example.add("03a5e4e873bdeb2a8c17abc41ded592654f89e35");
+	    example.add("5e9e6bc8dd0f500e2a303225bf2c03ff886fa655");
 		
 		ArrayList<String> checkSum = new ArrayList<>();
 		for(int i = 0; i < example.size(); i++) {
